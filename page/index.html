@@ -10,6 +10,31 @@
 </head>
 
 <body >
+    <pre>
+结构示例：
+[
+    ["public", "index.html的模板"],
+    [
+        "src",
+        "源码相关 ",
+        [
+            ["api", "网络请求相关api（列表页等页面使用）"],
+            ["assets", "用到的素材"],
+            [
+                "common",
+                "项目里公用的一些功能性逻辑",
+                [
+                    ["eventBus.js", "vue需要的eventBus"],
+                    ["io.js", "网络请求用的 (Home页面使用)"],
+                    ["util.js", "功能性函数"]
+                ]
+            ],
+            ["components", "Home页面用到的组件"]
+        ]
+    ]
+]
+数组里第0项是节点的值，第1项是描述，第2项是子节点数组
+    </pre>
     <textarea name="" id="input" cols="30" rows="10" placeholder="数组结构"></textarea>
     <button id="submit">Submit</button>
     <textarea name="" id="output" cols="30" rows="10" placeholder="输出" readonly></textarea>
