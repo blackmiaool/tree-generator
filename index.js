@@ -24,15 +24,16 @@ module.exports = function main(data) {
         isLast,
         stack
     }) {
+        let left="";
         stack.forEach((bit) => {
             if (bit) {
-                output += '│   '
+                left += '│   '
             } else {
-                output += '    '
+                left += '    '
             }
 
         });
-
+        output+=left;
         if (isLast) {
             output += '└'
         } else {
@@ -40,6 +41,10 @@ module.exports = function main(data) {
         }
         output += `── ${node.name} ${node.descr}`;
         output += '\n';
+        if(isLast&&!node.children){
+            output+=left;
+            output += '\n';
+        }
     }
 
 
